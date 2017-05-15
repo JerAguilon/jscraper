@@ -9,9 +9,6 @@ public enum RunningMode {
     FULL_RUN,
     // all pipelines will run, but companies that have been discovered will not be deleted
     RETAIN_COMPANIES,
-    // the company id pipeline will skip, but all jobs/fields will be cleared and run fresh for the companies already
-    // in the DB.
-    SKIP_COMPANIES,
     // additional jobs will not be discovered, and scraping will automatically start. Useful if your pipeline fails
     // while scraping and you want to rerun the scraping step without losing work.
     RETAIN_JOBS

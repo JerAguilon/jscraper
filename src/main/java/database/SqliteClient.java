@@ -27,6 +27,7 @@ public class SqliteClient {
 
     private static final String EMPTY_JSON_STRING = "{}";
 
+    private static final String CLEAR_COMPANIES_QUERY = "DELETE FROM companies";
     private static final String INSERT_COMPANY_QUERY =
             "INSERT into companies VALUES ('%s', '%s', '%s')";
     private static final String LOOKUP_COMPANY_QUERY =
@@ -74,6 +75,19 @@ public class SqliteClient {
 
         this.conn = DriverManager.getConnection(
                 DATABASE_URL_PREFIX + databaseLocation);
+    }
+
+    public void clearCompanies() {
+        PreparedStatement st = null;
+        try {
+            st = conn.prepareStatement(CLEAR_COMPANIES_QUERY);
+            st.executeUpdate();
+            st.close();
+            LOGGER.info("All companies cleared");
+        } catch (SQLException e) {
+            LOGGER.severe(e.getMessage());
+            throw new IllegalStateException("Couldn't clear fields. Pipelines aren't safe to run", e);
+        }
     }
 
     public List<CompanyId> listCompanies() {

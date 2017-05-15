@@ -1,10 +1,5 @@
 package pipelines.jobscraper;
 
-import com.google.common.collect.ImmutableList;
-import com.google.common.collect.ImmutableMap;
-import common.CompanyData;
-import common.CompanyId;
-import common.Field;
 import common.PageRequester;
 import common.PageRequester.Page;
 import database.SqliteClient;
@@ -12,17 +7,14 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
-import org.mockito.Mockito;
 import org.mockito.junit.MockitoJUnitRunner;
 
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.util.List;
-import java.util.Map;
 import java.util.regex.Matcher;
 
+import static org.junit.Assert.assertTrue;
 import static pipelines.jobscraper.JobScraperPipeline.CANDIDATE_FIELD_PATTERN;
-import static org.junit.Assert.*;
 
 @RunWith(MockitoJUnitRunner.class)
 public class JobScraperPipelineTest {
@@ -50,7 +42,7 @@ public class JobScraperPipelineTest {
         pipeline = new JobScraperPipeline(sqliteClient, pageRequester);
         page = new Page(new String(Files.readAllBytes(Paths.get("src/test/java/pipelines/jobscraper/testFile.html"))), "");
 
-        Mockito.when(pageRequester.get(JOB_LINK)).thenReturn(page);
+        //Mockito.when(pageRequester.get(JOB_LINK)).thenReturn(page);
     }
 
     @Test
