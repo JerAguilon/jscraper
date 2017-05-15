@@ -7,6 +7,7 @@ import common.CompanyId;
 import common.Field;
 import common.PageRequester;
 import common.PageRequester.Page;
+import database.SqliteClient;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -37,13 +38,16 @@ public class JobScraperPipelineTest {
     private Page page;
 
     @Mock
+    private SqliteClient sqliteClient;
+
+    @Mock
     private PageRequester pageRequester;
 
     private JobScraperPipeline pipeline;
 
     @Before
     public void setUp() throws Exception {
-        pipeline = new JobScraperPipeline(pageRequester);
+        pipeline = new JobScraperPipeline(sqliteClient, pageRequester);
         page = new Page(new String(Files.readAllBytes(Paths.get("src/test/java/pipelines/jobscraper/testFile.html"))), "");
 
         Mockito.when(pageRequester.get(JOB_LINK)).thenReturn(page);
