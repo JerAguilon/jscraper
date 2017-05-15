@@ -1,0 +1,66 @@
+<result>
+    <job>
+        <id>oWbS4fwN</id>
+        <title>Distribution Center Technician</title>
+        <requisitionid>1096</requisitionid>
+        <category>Supply Chain</category>
+        <jobtype>Temp</jobtype>
+        <location>Alpharetta, GA, United States</location>
+        <date>3/28/2017</date>
+        <detail-url>
+            <![CDATA[
+applicationLink
+]]>
+        </detail-url>
+        <apply-url>
+            <![CDATA[
+applicationLink]]>
+        </apply-url>
+        <description>
+            <p>description</p>
+        </description>
+        <briefdescription/>
+    </job>
+    <job>
+        <id>intern-id</id>
+        <title>Intern position</title>
+        <requisitionid>1096</requisitionid>
+        <category>category</category>
+        <jobtype>Temp</jobtype>
+        <location>USA</location>
+        <date>3/28/2017</date>
+        <detail-url>
+            <![CDATA[
+applicationLink]]>
+        </detail-url>
+        <apply-url>
+            <![CDATA[
+applicationLink]]>
+        </apply-url>
+        <description>
+            <p>description</p>
+        </description>
+        <briefdescription/>
+    </job>
+    <job>
+        <id>intern-id</id>
+        <title>Title</title>
+        <requisitionid>1096</requisitionid>
+        <category>intern category</category>
+        <jobtype>Temp</jobtype>
+        <location>USA</location>
+        <date>3/28/2017</date>
+        <detail-url>
+            <![CDATA[
+applicationLink]]>
+        </detail-url>
+        <apply-url>
+            <![CDATA[
+applicationLink]]>
+        </apply-url>
+        <description>
+            <p>description</p>
+        </description>
+        <briefdescription/>
+    </job>
+</result>

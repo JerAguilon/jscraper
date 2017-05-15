@@ -1,0 +1,18 @@
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+    testCompile 'org.mockito:mockito-core:2.7.22'
+    compile 'com.google.guava:guava:21.0'
+    compile group: 'org.json', name: 'json', version: '20090211'
+    compile 'org.xerial:sqlite-jdbc:3.8.11'
+    compile group: 'org.apache.httpcomponents', name: 'httpclient', version: '4.3.4'
+}
