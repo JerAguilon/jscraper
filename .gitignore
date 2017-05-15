@@ -78,6 +78,7 @@ fabric.properties
 
 # Package Files #
 *.jar
+!production_scraper.jar # include production jar
 *.war
 *.ear
 *.zip
