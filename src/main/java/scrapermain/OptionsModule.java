@@ -3,6 +3,9 @@ package scrapermain;
 import org.apache.commons.cli.Option;
 import org.apache.commons.cli.Options;
 
+/**
+ * Sets up the command line arguments for the scraper. Consumed by {@code ScraperMain}.
+ */
 public class OptionsModule {
 
     private static final String RUNNING_MODE_DESCRIPTION =
