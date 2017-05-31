@@ -135,13 +135,11 @@ public class JobScraperPipeline {
         Map<String, String> values = ImmutableMap.of();
 
         if (jsonObject.has("values")) {
-            ImmutableMap.Builder<String, String> valuesBuilder = ImmutableMap.builder();
             JSONArray jsonValues = jsonObject.getJSONArray("values");
             for (int i = 0; i < jsonValues.length(); i++) {
                 JSONObject value = jsonValues.getJSONObject(i);
-                valuesBuilder.put(value.getString("key"), value.getString("value"));
+                values.put(value.getString("key"), value.getString("value"));
             }
-            values = valuesBuilder.build();
         }
         return Field
                 .builder()
